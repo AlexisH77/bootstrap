@@ -1,0 +1,29 @@
+.banner {
+    background-image: url("img/imgFondo.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 150px 20px;
+    text-align: center;
+    color: white;
+
+    border-radius: 15px;
+    position: relative;
+}
+
+/* Capa oscura para mejorar lectura */
+.banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    border-radius: inherit;
+    z-index: 0;
+}
+
+/* Texto por encima del fondo */
+.banner * {
+    position: relative;
+    z-index: 1;
+}
